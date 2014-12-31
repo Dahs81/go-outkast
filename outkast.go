@@ -13,14 +13,14 @@ func main() {
 	app.Name = "go-outkast"
 	app.Usage = "test outkast"
 	app.Action = func(c *cli.Context) {
-		// Get the total number of arguments
+		// Grab all the arguments
 		ca := c.Args()
-		println(ca)
+
+		// Get the total number of arguments
 		l := len(c.Args())
 
 		// Select a random item from args
 		removedItem := random(0, l)
-		println(removedItem)
 
 		// Remove random item from ca
 		ca = append(ca[:removedItem], ca[removedItem+1:]...)
